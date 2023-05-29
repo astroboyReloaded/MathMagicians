@@ -1,0 +1,18 @@
+.calcContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 36vw;
+}
+
+.btn {
+  padding: 1.2rem;
+  width: 25%
+}
+
+.orange {
+  background-color: #f8943c;
+}
+
+.double {
+  width: 50%;
+}
