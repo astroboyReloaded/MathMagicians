@@ -5,8 +5,14 @@
 }
 
 .btn {
+  width: 25%;
   padding: 1.2rem;
-  width: 25%
+  border-radius: 0;
+  border-top: 2px solid #d1d1d1;
+  border-left: 2px solid #d4d4d4;
+  border-right: 2px solid #d4d4d4;
+  border-bottom: 2px solid #bbbbbb;
+
 }
 
 .orange {
