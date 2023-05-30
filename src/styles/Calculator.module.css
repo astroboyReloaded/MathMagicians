@@ -1,0 +1,40 @@
+.calcContainer {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+}
+
+.keyPad {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn {
+  width: 25%;
+  padding: 1.5rem;
+  border-radius: 0;
+  border-top: 1px solid #d1d1d1;
+  border-left: 0;
+  border-right: 3px solid #d4d4d4;
+  border-bottom: 1px solid #bbb;
+}
+
+.btn:active {
+  border-top: 3px solid #d1d1d1;
+  border-left: 1px solid #d1d1d1;
+  border-right: 3px solid #d4d4d4;
+  border-bottom: 0;
+}
+
+.orange {
+  background-color: #f8943c;
+  border-right: 0;
+}
+
+.orange:active {
+  border-right: 1px solid #d4d4d4;
+}
+
+.double {
+  width: 50%;
+}
