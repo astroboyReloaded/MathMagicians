@@ -15,7 +15,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+<!--   - [🚀 Live Demo](#live-demo) -->
 - [👥 Author](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -60,9 +60,9 @@
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+<!-- ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](https://math-magicians-ib6t.onrender.com/)
+- [Live Demo](https://math-magicians-ib6t.onrender.com/) -->
 
 ### Prerequisites
 
