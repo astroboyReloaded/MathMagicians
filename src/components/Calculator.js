@@ -1,6 +1,5 @@
-import keyPad from '../keyPadArr';
 import calculator from '../styles/Calculator.module.css';
-import { genClassName } from '../helpers';
+import { keyPad, genClassName } from '../helpers';
 import Screen from './Screen';
 
 const Calculator = () => (
