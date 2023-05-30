@@ -23,8 +23,8 @@ export default function operate(numberOne, numberTwo, operation) {
     try {
       return one.mod(two).toString();
     } catch (err) {
-      return "Can't find modulo as can't divide by 0.";
+      return "Can't find module as can't divide by 0.";
     }
   }
   throw Error(`Unknown operation '${operation}'`);
-};
+}
