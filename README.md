@@ -57,6 +57,9 @@
 ### Key Features <a name="key-features"></a>
 
 - Linters
+- Components.
+- Calculator.
+- Events.
 
 <!-- LIVE DEMO -->
 
@@ -113,9 +116,6 @@ npx stylelint "**/*.{css,scss}"
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Components.
-- Calculator.
-- Events.
 - Fetch data from API.
 - Full website.
 - Tests.

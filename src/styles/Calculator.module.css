@@ -33,6 +33,8 @@
 
 .orange:active {
   border-right: 1px solid #d4d4d4;
+  border-top: #bbb;
+  border-left: #bbb;
 }
 
 .double {

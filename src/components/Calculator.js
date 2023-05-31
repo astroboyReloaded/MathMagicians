@@ -1,15 +1,45 @@
-import keyPad from '../keyPadArr';
-import calculator from '../styles/Calculator.module.css';
-import { genClassName } from '../helpers';
+import { useState } from 'react';
+import { keyPad, genClassName } from '../helpers';
 import Screen from './Screen';
+import calculate from '../logic/calculate';
+import calculator from '../styles/Calculator.module.css';
 
-const Calculator = () => (
-  <div className={calculator.calcContainer}>
-    <Screen />
-    <div className={calculator.keyPad}>
-      {keyPad.map((key, i) => <button className={`${calculator[genClassName(i)]} ${calculator.btn}`} type="button" key={key}>{key}</button>)}
+const Calculator = () => {
+  const [calcDataObject, setCalcDataObject] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
+
+  const handleKeyPress = (event) => {
+    setCalcDataObject((prev) => ({
+      ...prev,
+      ...calculate(calcDataObject, event.target.value),
+    }));
+  };
+
+  return (
+    <div className={calculator.calcContainer}>
+      <Screen
+        total={calcDataObject.total || ''}
+        next={calcDataObject.next || ''}
+        operation={calcDataObject.operation || ''}
+      />
+      <div className={calculator.keyPad}>
+        {keyPad.map((key, i) => (
+          <button
+            className={`${calculator[genClassName(i)]} ${calculator.btn}`}
+            type="button"
+            key={key}
+            value={key}
+            onClick={handleKeyPress}
+          >
+            {key}
+          </button>
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Calculator;
