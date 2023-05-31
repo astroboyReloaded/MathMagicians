@@ -1,6 +1,10 @@
+header {
+  height: 9vh;
+}
+
 main {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 81vh;
+  justify-content: space-around;
   align-items: center;
 }
