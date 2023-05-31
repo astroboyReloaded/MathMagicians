@@ -60,7 +60,6 @@
 - Components.
 - Calculator.
 - Events.
-- Fetch data from API.
 
 <!-- LIVE DEMO -->
 
@@ -117,6 +116,7 @@ npx stylelint "**/*.{css,scss}"
 
 ## 🔭 Future Features <a name="future-features"></a>
 
+- Fetch data from API.
 - Full website.
 - Tests.
 
