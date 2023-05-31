@@ -1,0 +1,10 @@
+.quoteSection {
+  position: relative;
+  left: 9vw;
+  right: 36vw;
+}
+
+.phrase {
+  font-size: 1.8rem;
+  width: 45vw;
+}

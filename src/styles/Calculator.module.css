@@ -1,7 +1,9 @@
 .calcContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 30vw;
+  right: 9vw;
 }
 
 .keyPad {
