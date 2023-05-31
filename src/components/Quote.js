@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
-import quote from '../styles/Quote.module.css';
+import quoteStyle from '../styles/Quote.module.css';
 
 const Quote = () => {
   const [quote, setQuote] = useState('');
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState('');
 
   useEffect(() => {
+    setLoading(true);
+    const controller = new AbortController();
+    const { signal } = controller.signal;
     (async () => {
-      setLoading(true);
       try {
         const response = await fetch(
           'https://api.api-ninjas.com/v1/dadjokes?limit=1',
@@ -17,33 +19,40 @@ const Quote = () => {
               'X-Api-Key': 'oNaTrFfgL5OH2S52NR+xew==tPr1dJuqTaePURP8',
             },
           },
+          {
+            signal,
+          },
         );
         const data = await response.json();
-        setQuote(data);
+        setQuote(data[0].joke);
         setLoading(false);
       } catch (error) {
         setError(error);
         setLoading(false);
       }
     })();
+
+    return () => {
+      controller.abort();
+    };
   }, []);
 
   if (loading) {
     return <p>Loading...</p>;
   }
 
-  if (quote) {
+  if (error) {
     return (
-      <section>
-        <p>
-          {`${quote[0].joke}`}
-        </p>
-      </section>
+      <p>{`Ups! Something went wrong... ${error}`}</p>
     );
   }
 
   return (
-    <p>{`Ups! Something went wrong... ${error}`}</p>
+    <section className={quoteStyle.quoteSection}>
+      <p className={quoteStyle.phrase}>
+        {quote}
+      </p>
+    </section>
   );
 };
 

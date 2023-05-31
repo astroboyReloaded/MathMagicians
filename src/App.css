@@ -3,8 +3,9 @@ header {
 }
 
 main {
+  position: relative;
   display: flex;
   height: 81vh;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
