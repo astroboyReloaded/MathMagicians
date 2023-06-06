@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  margin-block: auto;
+}
+
+.ul {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.li {
+  padding: 0.3rem 0.6rem;
+  border-right: 1px solid black;
+}
+
+.li:nth-child(3) {
+  border-right: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  color: red;
+}
