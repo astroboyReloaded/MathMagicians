@@ -48,11 +48,11 @@ const Quote = () => {
   }
 
   return (
-    <section className={quoteStyle.quoteSection}>
+    <main>
       <p className={quoteStyle.phrase}>
         {quote}
       </p>
-    </section>
+    </main>
   );
 };
 

@@ -19,26 +19,31 @@ const Calculator = () => {
   };
 
   return (
-    <div className={calculator.calcContainer}>
-      <Screen
-        total={calcDataObject.total || ''}
-        next={calcDataObject.next || ''}
-        operation={calcDataObject.operation || ''}
-      />
-      <div className={calculator.keyPad}>
-        {keyPad.map((key, i) => (
-          <button
-            className={`${calculator[genClassName(i)]} ${calculator.btn}`}
-            type="button"
-            key={key}
-            value={key}
-            onClick={handleKeyPress}
-          >
-            {key}
-          </button>
-        ))}
+    <main>
+      <div className={calculator.pageContainer}>
+        <h2 className={calculator.h2}>Let´s do some math!</h2>
+        <div className={calculator.calcContainer}>
+          <Screen
+            total={calcDataObject.total || ''}
+            next={calcDataObject.next || ''}
+            operation={calcDataObject.operation || ''}
+          />
+          <div className={calculator.keyPad}>
+            {keyPad.map((key, i) => (
+              <button
+                className={`${calculator[genClassName(i)]} ${calculator.btn}`}
+                type="button"
+                key={key}
+                value={key}
+                onClick={handleKeyPress}
+              >
+                {key}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
   );
 };
 

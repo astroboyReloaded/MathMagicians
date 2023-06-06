@@ -6,6 +6,6 @@ main {
   position: relative;
   display: flex;
   height: 81vh;
-  justify-content: space-between;
   align-items: center;
+  padding-left: 1rem;
 }
