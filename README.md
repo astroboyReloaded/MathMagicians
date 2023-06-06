@@ -61,6 +61,8 @@
 - Calculator.
 - Events.
 - Fetch data from API.
+- React Router.
+- Styling.
 
 <!-- LIVE DEMO -->
 
@@ -117,7 +119,6 @@ npx stylelint "**/*.{css,scss}"
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Full website.
 - Tests.
 
 <!-- CONTRIBUTING -->
