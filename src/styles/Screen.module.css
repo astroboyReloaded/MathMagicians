@@ -1,12 +1,12 @@
 .screen {
   box-sizing: border-box;
   width: 100%;
-  height: 3.9rem;
+  height: 5.1rem;
   background-color: #888494;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 2.1rem;
   color: white;
-  padding: 0.3rem;
+  padding: 0.6rem;
 }

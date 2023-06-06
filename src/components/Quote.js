@@ -8,8 +8,6 @@ const Quote = () => {
 
   useEffect(() => {
     setLoading(true);
-    const controller = new AbortController();
-    const { signal } = controller.signal;
     (async () => {
       try {
         const response = await fetch(
@@ -18,9 +16,6 @@ const Quote = () => {
             headers: {
               'X-Api-Key': 'oNaTrFfgL5OH2S52NR+xew==tPr1dJuqTaePURP8',
             },
-          },
-          {
-            signal,
           },
         );
         const data = await response.json();
@@ -31,27 +26,17 @@ const Quote = () => {
         setLoading(false);
       }
     })();
-
-    return () => {
-      controller.abort();
-    };
   }, []);
-
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
-  if (error) {
-    return (
-      <p>{`Ups! Something went wrong... ${error}`}</p>
-    );
-  }
 
   return (
     <main>
-      <p className={quoteStyle.phrase}>
-        {quote}
-      </p>
+      {loading && <p className={quoteStyle.phrase}>Loading...</p>}
+      {error && <p className={quoteStyle.phrase}>{`Ups! Something went wrong... ${error}`}</p>}
+      {quote && (
+        <p className={quoteStyle.phrase}>
+          {`'${quote}'`}
+        </p>
+      )}
     </main>
   );
 };

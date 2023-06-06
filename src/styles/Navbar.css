@@ -5,6 +5,12 @@
 
 .title {
   margin-block: auto;
+  font-size: 3.6rem;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.navbar {
+  margin-right: 3rem;
 }
 
 .ul {
@@ -18,19 +24,25 @@
 }
 
 .li {
-  padding: 0.3rem 0.6rem;
   border-right: 1px solid black;
+  padding: 0.3rem 0.9rem;
+  font-size: 1.2rem;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .li:nth-child(3) {
   border-right: none;
 }
 
-a {
-  text-decoration: none;
-  color: black;
+a:active {
+  color: rgb(0, 117, 163);
 }
 
 .active {
-  color: red;
+  color: black;
+  text-decoration: none;
+}
+
+.hover {
+  cursor: pointer;
 }
