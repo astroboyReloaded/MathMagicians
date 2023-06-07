@@ -1,9 +1,18 @@
+.pageContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.h2 {
+  align-self: flex-start;
+}
+
 .calcContainer {
-  position: relative;
   display: flex;
   flex-direction: column;
   width: 30vw;
-  right: 9vw;
+  padding-right: 6.3rem;
 }
 
 .keyPad {
@@ -19,6 +28,7 @@
   border-left: 0;
   border-right: 3px solid #d4d4d4;
   border-bottom: 1px solid #bbb;
+  font-size: 1.5rem;
 }
 
 .btn:active {

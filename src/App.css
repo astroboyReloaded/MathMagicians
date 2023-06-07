@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Noto+Sans+JP:wght@600;800;900&display=swap');
+
 header {
   height: 9vh;
 }
@@ -6,6 +8,22 @@ main {
   position: relative;
   display: flex;
   height: 81vh;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  padding-inline: 1.8rem;
+}
+
+.home-text-container p {
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  font-size: 2.1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.loading {
+  padding: 1.8rem;
+  font-size: 1.5rem;
 }

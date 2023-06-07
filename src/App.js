@@ -1,16 +1,18 @@
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import Calculator from './components/Calculator';
-import './App.css';
 import Quote from './components/Quote';
+import Home from './components/Home';
+import './App.css';
 
 const App = () => (
   <>
-    <header>
-      <h1>Math Magicians</h1>
-    </header>
-    <main>
-      <Quote />
-      <Calculator />
-    </main>
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/calculator" element={<Calculator />} />
+      <Route path="/quote" element={<Quote />} />
+    </Routes>
   </>
 );
 
